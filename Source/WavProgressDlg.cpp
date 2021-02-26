@@ -154,6 +154,7 @@ void CWavProgressDlg::OnTimer(UINT_PTR nIDEvent)
 	pProgressBar->SetPos(PercentDone);
 
 	if (!Rendering) {
+		EndDialog(0);
 		SetDlgItemText(IDC_CANCEL, CString(MAKEINTRESOURCE(IDS_WAVE_EXPORT_DONE)));
 		CString title;
 		GetWindowText(title);
